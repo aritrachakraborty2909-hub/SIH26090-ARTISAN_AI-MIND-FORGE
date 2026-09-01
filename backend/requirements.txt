@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+pydantic
+python-multipart
+rembg
+pillow
+google-genai
+numpy
