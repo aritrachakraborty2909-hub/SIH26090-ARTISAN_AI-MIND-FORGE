@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 630 580" fill="none">
+  <defs>
+    <linearGradient id="A" x1="110" y1="180" x2="510" y2="510" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5B20E6"/>
+      <stop offset=".42" stop-color="#5426D9"/>
+      <stop offset=".72" stop-color="#1489E8"/>
+      <stop offset="1" stop-color="#08C6C9"/>
+    </linearGradient>
+    <linearGradient id="S" x1="75" y1="470" x2="555" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#D51EEA"/>
+      <stop offset=".28" stop-color="#8125E7"/>
+      <stop offset=".62" stop-color="#235CE7"/>
+      <stop offset="1" stop-color="#0ACBC8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Main stylized A -->
+  <path fill="url(#A)" d="
+    M34 520
+    L225 64
+    C238 32 264 18 300 18
+    C335 18 360 35 374 66
+    L511 326
+    L424 326
+    L296 119
+    L170 520
+    Z"/>
+  <path fill="url(#A)" d="
+    M397 520
+    L332 329
+    L420 329
+    L489 520
+    Z"/>
+
+  <!-- Sweeping ribbon / connecting stroke -->
+  <path fill="url(#S)" d="
+    M34 520
+    C92 461 143 413 205 388
+    C267 363 325 367 382 365
+    C445 363 491 349 517 316
+    C536 292 546 265 550 239
+    C552 281 544 319 521 347
+    C491 384 444 399 381 404
+    C318 409 267 410 218 431
+    C167 453 136 489 112 510
+    C94 526 73 531 34 520
+    Z"/>
+
+  <!-- Upper sparkle -->
+  <path fill="#4014C8" d="
+    M500 89
+    C505 111 515 119 538 123
+    C515 127 505 137 500 160
+    C496 138 486 128 463 123
+    C486 119 496 111 500 89 Z"/>
+
+  <!-- Lower sparkle -->
+  <path fill="#3D18D0" d="
+    M477 147
+    C480 160 486 166 500 169
+    C486 172 480 179 477 192
+    C474 179 468 172 454 169
+    C468 166 474 160 477 147 Z"/>
+
+  <!-- Cyan sparkle -->
+  <path fill="#12BFE2" d="
+    M552 131
+    C555 143 561 149 573 152
+    C561 154 555 161 552 173
+    C549 161 543 154 531 152
+    C543 149 549 143 552 131 Z"/>
+</svg>
