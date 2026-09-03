@@ -1,0 +1,149 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --inshot-bg: #0d0e12;
+    --inshot-panel: #16171d;
+    --inshot-surface: #20222a;
+    --inshot-coral: #ff3366;
+    --inshot-orange: #ff5e62;
+    --inshot-yellow: #ff9966;
+    --inshot-cyan: #00e5ff;
+    --text-main: #ffffff;
+    --text-muted: #9e9ea7;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--inshot-bg);
+    color: var(--text-main);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* InShot Signature Background Ambient Glow */
+.bg-inshot-dark {
+  background-color: #0b0c10;
+  background-image: 
+    radial-gradient(at 10% 10%, rgba(255, 51, 102, 0.14) 0px, transparent 45%),
+    radial-gradient(at 90% 15%, rgba(0, 229, 255, 0.10) 0px, transparent 45%),
+    radial-gradient(at 50% 85%, rgba(255, 94, 98, 0.12) 0px, transparent 50%);
+}
+
+/* InShot Signature Gradient */
+.bg-inshot-gradient {
+  background: linear-gradient(135deg, #ff3366 0%, #ff5e62 50%, #ff9966 100%);
+}
+
+.bg-inshot-gradient-hover:hover {
+  background: linear-gradient(135deg, #ff1f56 0%, #ff4b50 50%, #ff884d 100%);
+}
+
+.text-gradient-inshot {
+  background: linear-gradient(135deg, #ffffff 0%, #ffb3c1 40%, #ff3366 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* InShot Matte Dark Panels & Cards */
+.inshot-card {
+  background: rgba(22, 23, 29, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.inshot-card-hover {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.inshot-card-hover:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 51, 102, 0.4);
+  box-shadow: 0 15px 30px -5px rgba(255, 51, 102, 0.2);
+}
+
+.border-inshot-glow {
+  border: 1px solid rgba(255, 51, 102, 0.35);
+  box-shadow: 0 0 25px -5px rgba(255, 51, 102, 0.25);
+}
+
+/* InShot Laser Scanline Animation */
+@keyframes inshotLaserScan {
+  0% {
+    top: 0%;
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: 98%;
+    opacity: 0.9;
+  }
+}
+
+.scanline-inshot {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2.5px;
+  background: linear-gradient(90deg, transparent, #ff3366, #00e5ff, transparent);
+  box-shadow: 0 0 20px #ff3366;
+  animation: inshotLaserScan 2.5s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+/* InShot Mic Pulse */
+@keyframes inshotMicPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 51, 102, 0.8);
+  }
+  70% {
+    box-shadow: 0 0 0 22px rgba(255, 51, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 51, 102, 0);
+  }
+}
+
+.mic-inshot-pulse {
+  animation: inshotMicPulse 1.5s infinite;
+}
+
+/* InShot Custom Sliders */
+input[type="range"] {
+  accent-color: #ff3366;
+}
+
+/* Touch Control Feedback */
+.touch-btn {
+  min-height: 48px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.touch-btn:active {
+  transform: scale(0.95);
+}
+
+/* Print Styles */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .printable-hangtag, .printable-hangtag * {
+    visibility: visible;
+  }
+  .printable-hangtag {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+}
