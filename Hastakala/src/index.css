@@ -133,6 +133,9 @@ input[type="range"] {
 }
 
 /* Print Styles */
+
+
+
 @media print {
   body * {
     visibility: hidden;
@@ -147,3 +150,4 @@ input[type="range"] {
     width: 100%;
   }
 }
+
